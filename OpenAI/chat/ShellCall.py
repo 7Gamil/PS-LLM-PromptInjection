@@ -50,6 +50,10 @@ class ShellCall(ChatCallBase):
     def list_folder(self, path: str) -> str:
         try:
             path = path.rstrip("\\")
+
+            print("Uncomment the next line if you're really sure you want the LLM to run commands on your machine")
+            return "Disabled for safety"
+
             result = subprocess.run(
                 ["cmd.exe", "/c", "dir", path],
                 capture_output=True,
