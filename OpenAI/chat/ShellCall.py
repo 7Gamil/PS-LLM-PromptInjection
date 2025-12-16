@@ -51,7 +51,7 @@ class ShellCall(ChatCallBase):
         try:
             path = path.rstrip("\\")
 
-            print("Uncomment the next line if you're really sure you want the LLM to run commands on your machine")
+            print("Comment the next line if you're really sure you want the LLM to run commands on your machine")
             return "Disabled for safety"
 
             result = subprocess.run(
